@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import { Box } from "@material-ui/core";
+import Home from "./components/home/Home";
+import DetailView from "./components/post/DetailView";
+import { BrowserRouter, Switch,Route } from 'react-router-dom';
+import CreateView from "./components/post/CreateView";
+import UpdateView from "./components/post/UpdateView";
 
+//browser router is used to enable the linking atmosphere in the app
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Box
+        style={{
+          marginTop: 64,
+        }}
+      >
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route exact path='/details' component={DetailView} />
+          <Route exact path='/create' component={CreateView} />
+          <Route exact path='/update' component={UpdateView} />
+        </Switch>
+      </Box>
+    </BrowserRouter>
   );
 }
 
