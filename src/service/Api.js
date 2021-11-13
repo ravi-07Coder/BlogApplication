@@ -11,6 +11,5 @@ export const createPost=  async (post) =>{
     {
         console.log('error while creating api',error)
     }
-
 }
 //In post Api call we send the data
