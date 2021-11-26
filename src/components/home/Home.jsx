@@ -15,7 +15,7 @@ const Home = () => {
                     <Categories />
                 </Grid>
                 <Grid container item lg={10} xs={12} sm={10}>
-                    <Post />
+                    <Post/>
                 </Grid>
             </Grid>
         </div>

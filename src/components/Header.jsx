@@ -1,5 +1,5 @@
 import React from 'react'
-import {AppBar,Toolbar,Typography,makeStyles} from '@material-ui/core'
+import {AppBar,Toolbar,Typography,makeStyles,Button} from '@material-ui/core'
 import {Link} from 'react-router-dom'
 
 const useStyles=makeStyles({
@@ -27,7 +27,7 @@ const Header = () => {
             <Link to ='/' style={{textDecoration:'none',color:'inherit'}}><Typography >HOME</Typography></Link>
               <Typography>ABOUT</Typography>
               <Typography>CONTACT</Typography>
-              <Typography>LOGIN</Typography>
+              <Button>LOGOUT</Button>
            </Toolbar>
         </AppBar>
     )
