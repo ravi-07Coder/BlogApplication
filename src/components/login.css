@@ -1,5 +1,8 @@
 body{
-    background-color: rgba(11, 7, 226, 0.664);
+    
+   
+    
+    background: linear-gradient(to bottom, #9999ff 0%, #ffffff 100%);
 }
 
 .login {

@@ -6,7 +6,7 @@ import { LS_AUTH_TOKEN } from '../constants/data'
 const useStyles=makeStyles({
 
      component:{
-         backgroundColor:'#1B2631 '
+         backgroundColor:'gray'
         ,color:'black',
      },
      container:{

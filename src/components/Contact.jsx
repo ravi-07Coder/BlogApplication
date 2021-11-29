@@ -1,9 +1,10 @@
 import { Box, makeStyles, Typography, Link } from '@material-ui/core';
 import { GitHub,  Email } from '@material-ui/icons';
+import contact from './contactblog.jpg'
 
 const useStyles = makeStyles({
     banner: {
-        backgroundImage: `url(${'http://mrtaba.ir/image/bg2.jpg'})`,
+        backgroundImage: `url(${contact})`,
         width: '100%',
         height: '50vh',
         backgroundPosition: 'left 0px top -100px',

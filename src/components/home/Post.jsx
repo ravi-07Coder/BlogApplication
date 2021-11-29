@@ -14,9 +14,10 @@ const useStyles=makeStyles({
           padding:'0 5px 5px 5px'
       },
       "&:hover":{
-       
-        trsnsform:"scale2d(1.5,2.5)",
-        backgroundColor:'white'
+    
+        backgroundColor:'white',
+        transform: "scale3d(1.05, 1.05, 1.5)",
+        boxShadow: '5px 10px #888888'
       }
       
     },

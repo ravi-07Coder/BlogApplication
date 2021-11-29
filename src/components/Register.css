@@ -1,6 +1,6 @@
 .register {
     width: 400px;
-    height:115vh;
+    height:100vh;
     background: #fff;
     border: 1px solid #dddfe2;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
@@ -14,7 +14,7 @@
     flex-direction: column;
     background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxbz2H_3x6WqlrPW4WJk9zpegpHLuhFUtEgA&usqp=CAU');
     background-repeat: no-repeat;
-    background-size:100% 45%;
+    background-size:100% 40%;
     background-position: initial;
 }
 
