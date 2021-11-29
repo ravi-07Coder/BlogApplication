@@ -1,10 +1,15 @@
 import React from "react";
-import { makeStyles, Box, Typography } from "@material-ui/core";
+import { makeStyles, Box } from "@material-ui/core";
+import img from "../post/zz1-3.jpg"
+
+
+
+
 const useStyles = makeStyles({
   image: {
-    background: `url(${"https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg"}) center/55% repeat-x #000`,
+    background: `url(${img}) center 130%   #000`,
     width: "100%",
-    height: "50vh",
+    height: "95vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -26,8 +31,8 @@ const Banner = () => {
   const classes = useStyles();
   return (
     <Box className={classes.image}>
-      <Typography>BLOG</Typography>
-      <Typography>Hey Bloggers!</Typography>
+      
+      
     </Box>
   );
 };

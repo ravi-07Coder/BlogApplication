@@ -61,19 +61,20 @@ const Comments=({post})=> {
               
           })
   }
-   const postComment=async()=>{
+   const postComment=async(e)=>{
        await newComment(comment)
         settoggle(prev=>!prev)
+        setComment({...comment, comments: ""})
     }
     const classes=useStyles();
     return (
         <Box>
             <Box className={classes.componet}>
               <img src={'https://static.thenounproject.com/png/12017-200.png'} alt="dp" className={classes.image}/>
-            <TextareaAutosize className={classes.textAreaAutoSize}  minRows={5}   
+            <TextareaAutosize value={comment.comments} className={classes.textAreaAutoSize}  minRows={5}   
               onChange={(e)=>handleChange(e)}
             />
-            <Button variant="contained" color="primary" size="meduium" className={classes.button} onClick={()=>postComment()}>
+            <Button variant="contained" color="primary" size="meduium" className={classes.button} onClick={(e)=>postComment()}>
               Post
             </Button>
             </Box>

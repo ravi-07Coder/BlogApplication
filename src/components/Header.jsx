@@ -1,10 +1,12 @@
 import React from 'react'
 import {AppBar,Toolbar,Typography,makeStyles,Button} from '@material-ui/core'
 import {Link} from 'react-router-dom'
+import { LS_AUTH_TOKEN } from '../constants/data'
 
 const useStyles=makeStyles({
+
      component:{
-         backgroundColor:'#ffffff'
+         backgroundColor:'#1B2631 '
         ,color:'black',
      },
      container:{
@@ -24,10 +26,13 @@ const Header = () => {
     return (
         <AppBar className={classes.component}>
            <Toolbar className={classes.container}>
-            <Link to ='/' style={{textDecoration:'none',color:'inherit'}}><Typography >HOME</Typography></Link>
-              <Typography>ABOUT</Typography>
-              <Typography>CONTACT</Typography>
-              <Button>LOGOUT</Button>
+            <Link to ='/' style={{textDecoration:'none',color:'white'}}><Typography >HOME</Typography></Link>
+            <Link to ='/about' style={{textDecoration:'none',color:'white'}}><Typography>ABOUT</Typography></Link>
+            <Link to ='/contact' style={{textDecoration:'none',color:'white'}}><Typography>CONTACT</Typography></Link>
+              <Button onClick={() => {
+                  localStorage.removeItem(LS_AUTH_TOKEN);
+                  window.location.href = "/login";
+              }}><Typography style={{color:'white'}}>LOGOUT</Typography></Button>
            </Toolbar>
         </AppBar>
     )

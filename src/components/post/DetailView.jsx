@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
     Icon: {
         margin: 5,
-        border: '1px solid #878787',
+        border: '1px solid black',
         padding: 5,
         borderRadius: '10px'
     },
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     },
     subheading:
     {
-        color: '#878787',
+        color: '#dedede',
         display: 'flex',
         margin: '20px 0',
         [theme.breakpoints.down('md')]: {
@@ -59,11 +59,14 @@ const DetailView = ({ match }) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            let data = await getPost(match.params.id);
+            let d=window.location.href.split('/')
+            d=d[d.length-1];
+            let data=await getPost(d)
+    
             setPost(data);
         }
         fetchData();
-    }, [])
+    }, []) //eslint-disable-line
 
 
     const deleteBlog = async () => {

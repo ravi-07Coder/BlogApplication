@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import "./Register.css";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
 import {LS_AUTH_TOKEN} from "../constants/data";
 
 const Register = () => {
 
-    const history = useHistory()
+
 
     const [ user, setUser] = useState({
         name: "",
@@ -30,7 +29,7 @@ const Register = () => {
             axios.post("http://localhost:8000/register", {name, email, password})
             .then( res => {
                 localStorage.setItem(LS_AUTH_TOKEN, res.data.token);
-                history.push("/")
+                window.location.href = "/";
             })
         } else {
             alert("invlid input")
@@ -40,14 +39,14 @@ const Register = () => {
     return (
         <div className="register">
             {console.log("User", user)}
-            <h1>Register</h1>
-            <input type="text" name="name" value={user.name} placeholder="Your Name" onChange={ handleChange }></input>
+            <h1 style={{marginTop:185}}>REGISTRATION</h1>
+            <input style={{marginTop:105}} type="text" name="name" value={user.name} placeholder="Your Name" onChange={ handleChange }></input>
             <input type="text" name="email" value={user.email} placeholder="Your Email" onChange={ handleChange }></input>
             <input type="password" name="password" value={user.password} placeholder="Your Password" onChange={ handleChange }></input>
             <input type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter Password" onChange={ handleChange }></input>
             <div className="button" onClick={register} >Register</div>
-            <div>or</div>
-            <div className="button" onClick={() => history.push("/login")}>Login</div>
+            
+            <div className="button" onClick={()=> {window.location.href="/login"}}>Login</div>
         </div>
     )
 }

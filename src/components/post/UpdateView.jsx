@@ -54,7 +54,7 @@ const intialValues = {
     const UpdateView = ({ match }) => {
     const [post, setPost] = useState(intialValues);
     const [file, setFile] = useState('');
-    const [image, setimage] = useState('');
+    const [image, setimage] = useState(''); //eslint-disable-line
     
     useEffect(() => {
 
@@ -70,7 +70,7 @@ const intialValues = {
             }
         }
         getImage();
-    }, [file])
+    }, [file]) //eslint-disable-line
 
     const url = post.picture ? post.picture : 'https://images.unsplash.com/photo-1543128639-4cb7e6eeef1b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwc2V0dXB8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80'
     
@@ -82,11 +82,13 @@ const intialValues = {
     
     useEffect(() => {
         const fetchData = async () => {
-            let data = await getPost(match.params.id);
+            let d=window.location.href.split('/')
+            d=d[d.length-1];
+            let data = await getPost(d);
             setPost(data)
         }
         fetchData();
-    }, [])
+    }, []) //eslint-disable-line
     const handleChange = (e) => {
         setPost({ ...post, title: e.target.value })
     }
@@ -94,8 +96,10 @@ const intialValues = {
         setPost({ ...post, description: e.target.value })
     }
     const updateBlog = async () => {
-        await updatePost(match.params.id, post)
-        history.push(`/details/${match.params.id}`)
+        let d=window.location.href.split('/')
+        d=d[d.length-1];
+        await updatePost(d, post)
+        history.push(`/details/${d}`)
     }
 
 

@@ -6,7 +6,9 @@ import { createPost, uploadFile } from '../../service/Api.js'
 
 const useStyles = makeStyles((theme) => ({
     Image: {
-        width: '100%',
+        width: '80%',
+        margin:'auto',
+        marginLeft:'95px',
         height: '50vh',
         objectFit: 'cover'
     },
@@ -20,18 +22,19 @@ const useStyles = makeStyles((theme) => ({
     form: {
         display: 'flex',
         flexDirection: 'row',
-        marginTop: '10px'
+        marginTop: '15px'
     },
     TextField: {
+        width:'75%',
         flex: 1,
-        margin: '0 10px',
+        margin: '0 55px',
         fontSize: '25px'
     },
     TextArea: {
         width: '100%',
         marginTop: '50px',
         border: 'none',
-        fontSize: '18',
+        fontSize: '25',
         '&:focus-visible': {
             outline: 'none'
         }
@@ -42,8 +45,8 @@ const initValues = {
     title: "",
     description: "",
     picture: '',
-    username: 'ravi',
-    categories: 'All',
+    username: '',
+    categories: '',
     createdDate: new Date()
 }
 
@@ -51,7 +54,7 @@ const CreateView = () => {
    
     const [post, setPost] = useState(initValues)
     const [file, setFile] = useState('');
-    const [image, setImage] = useState('');
+    const [image, setImage] = useState(''); //eslint-disable-line
     
   
     useEffect(() => {
@@ -61,7 +64,7 @@ const CreateView = () => {
                 const data = new FormData();
                 data.append("name", file.name);
                 data.append("file", file);
-                const  image = await uploadFile(data);
+                const image = await uploadFile(data);
                 console.log(image)
                 post.picture = image.data;
                 console.log(post.picture)
@@ -69,7 +72,7 @@ const CreateView = () => {
             }
         }
         getImage();
-    }, [file])
+    }, [file]) //eslint-disable-line
     
 
     const handleChange = (e) => {
@@ -78,8 +81,16 @@ const CreateView = () => {
     const handleChange1 = (e) => {
         setPost({ ...post, description: e.target.value })
     }
+    const handleChange2 = (e) => {
+        setPost({ ...post, username: e.target.value })
+    }
+    const handleChange3=(e)=>{
+        setPost({...post,categories:e.target.value})
+    }
     const savePost = async () => {
+        
         await createPost(post)
+       window.location.href='/'
     }
     //create the intial value post use the set state to keep on changing the values use hamdlechange to handle the onchange funtionality
     //create an api for the post of the data and on the click of the publish button create a savePost function  
@@ -99,9 +110,16 @@ const CreateView = () => {
                     onChange={(e) => setFile(e.target.files[0])}
                 />
                 <InputBase onChange={(e) => handleChange(e)} placeholder='Title'
-                    name="title" className={classes.TextField} />
+               style={{
+                marginLeft:25}}     name="title" className={classes.TextField} />
                 <Button onClick={() => savePost()} variant="contained" color="primary">Publish</Button>
             </FormControl>
+            <br/>
+            <InputBase onChange={(e)=>handleChange2(e)} placeholder='Author' name='username' className={classes.TextField}/>
+            
+            <InputBase onChange={(e)=>handleChange3(e)} placeholder='Category=>Music Sports Tech Politics' name='categories' style={{
+                marginLeft:50
+            }} className={classes.TextField}/>
             <TextareaAutosize rowsMin={5} placeholder="Tell your story"
                 onChange={(e) => handleChange1(e)}
                 name="description"

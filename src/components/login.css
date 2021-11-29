@@ -1,67 +1,52 @@
+body{
+    background-color: rgba(11, 7, 226, 0.664);
+}
+
 .login {
-    width: 400px;
-    background: #fff;
-    border: 1px solid #dddfe2;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    width: 300px;
+    margin:auto; 
+    border: 1.5px solid #383838;
+    /* box-shadow: 10px 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%); */
+    box-shadow: -10px -10px 100px #ffffff41 ;
     border-radius: 8px;
     padding: 1rem;
     align-items: center;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    margin-top: 150px;
+    background-color:white;
+    background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxbz2H_3x6WqlrPW4WJk9zpegpHLuhFUtEgA&usqp=CAU');
+    background-repeat: no-repeat;
+    background-size:100% 40%;
+    background-position: initial;
 }
 
 .login > input {
     
     border-radius: 8px;
-    border: 2px solid #dddfe2;
+    text-align: center;
+    border: 1px solid #5a5c5e;
     outline: none;
-    color: #1d2129;
+    color: #1d2129be;
     margin: 0.5rem 0;
     padding: 0.5rem 0.75rem;
-    width: 92%;
+    width: 62%;
     font-size: 1rem;
 }
 
 .login > .button {
-    background: #1877f2;
-    border: 1px solid #1877f2;
+    background: #47597e;
+    border: 1px solid #e2e3e4;
     color: #fff;
-    font-size: 1.25rem;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
+    font-size: 1rem;
+    padding: 0.3rem;
+    margin-left: 10px;
     border-radius: 8px;
+    width:70px;
+    
     outline: none;
     cursor: pointer;
 }
 
-/* import './App.css'
-import Homepage from "./components/homepage/homepage"
-import Login from "./components/login/login"
-import Register from "./components/register/register"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useState } from 'react';
-
-function App() {
-
-  const [ user, setLoginUser] = useState({})
-  return (
-    <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            {
-              user && user._id ? <Homepage setLoginUser={setLoginUser} /> : <Login setLoginUser={setLoginUser}/>
-            }
-          </Route>
-          <Route path="/login">
-            <Login setLoginUser={setLoginUser}/>
-          </Route>
-          <Route path="/register">
-            <Register />
-          </Route>
-        </Switch>
-      </Router>
-    </div>
-  );
-}
-
-export default App; */

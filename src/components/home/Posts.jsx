@@ -13,7 +13,7 @@ const Posts = () => {
        const fetchData= async () => {
         let data= await getAllPosts(search); 
         console.log(data)
-        setPosts(data)  
+     setPosts(data)  
     }
     fetchData();
    }, [search])

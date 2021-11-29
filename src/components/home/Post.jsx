@@ -5,15 +5,22 @@ const useStyles=makeStyles({
       height:'350px',
       margin:10,
       borderRadius:10,
-      border:'1px solid #d3cede',
+      border:'2px solid black',
       display:'flex',
       alignItems:'center',
       flexDirection:'column',
       '& > *':
       {
           padding:'0 5px 5px 5px'
+      },
+      "&:hover":{
+       
+        trsnsform:"scale2d(1.5,2.5)",
+        backgroundColor:'white'
       }
+      
     },
+  
    image:
    {
        height:'150px',
