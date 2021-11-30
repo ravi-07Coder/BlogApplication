@@ -4,9 +4,6 @@ import axios from "axios";
 import {LS_AUTH_TOKEN} from "../constants/data";
 
 const Register = () => {
-
-
-
     const [ user, setUser] = useState({
         name: "",
         email:"",
@@ -46,7 +43,7 @@ const Register = () => {
             <input type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter Password" onChange={ handleChange }></input>
             <div  style={{marginRight:185, marginTop:25}} className="button" onClick={register} >Register</div>
         
-            <div style={{marginRight:-95, marginTop:-50}} className="button"    className="button" onClick={()=> {window.location.href="/login"}}>Login</div>
+            <div style={{marginRight:-95, marginTop:-50}} className="button" onClick={()=> {window.location.href="/login"}}>Login</div>
         </div>
     )
 }

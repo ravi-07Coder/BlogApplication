@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-const URL='http://localhost:8000'
+const URL='https://blog-application-server.herokuapp.com'
 export const createPost=  async (post) =>{
     console.log(post)
     try{
