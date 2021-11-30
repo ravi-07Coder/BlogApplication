@@ -23,7 +23,7 @@ const Register = () => {
         const { name, email, password, reEnterPassword } = user
         if( name && email && password && (password === reEnterPassword)){
             console.log(name, email, password);
-            axios.post("http://localhost:8000/register", {name, email, password})
+            axios.post("https://blog-application-server.herokuapp.com/register", {name, email, password})
             .then( res => {
                 localStorage.setItem(LS_AUTH_TOKEN, res.data.token);
                 window.location.href = "/";

@@ -21,7 +21,7 @@ const Login = () => {
     }
 
     const login = () => {
-        axios.post("http://localhost:8000/login", user)
+        axios.post("https://blog-application-server.herokuapp.com/login", user)
         .then(res => {
             localStorage.setItem(LS_AUTH_TOKEN, res.data.token);
             window.location.href = "/"
