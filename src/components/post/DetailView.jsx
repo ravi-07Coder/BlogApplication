@@ -85,9 +85,9 @@ const DetailView = ({ match }) => {
             <Typography className={classes.heading}>{post.title}</Typography>
             <Box className={classes.subheading}>
                 <Link to={`/?username=${post.username}`} className={classes.link}>
-                <Typography >Author: <span style={{ fontWeight: '600', color: 'black' }}>{post.username}</span></Typography>
+                <Typography style={{color:"gray"}}>Author: <span style={{ fontWeight: '600', color: 'black' }}>{post.username}</span></Typography>
                   </Link>
-                <Typography style={{ marginLeft: 'auto' }}>{new Date(post.createdDate).toDateString()}</Typography>
+                <Typography style={{ marginLeft: 'auto',color:'gray' }}>{new Date(post.createdDate).toDateString()}</Typography>
             </Box>
             <Typography>{post.description}</Typography>
             <Comments post={post}/>
