@@ -22,7 +22,7 @@ const useStyles=makeStyles({
          
          date:{
              fontSize:14,
-             color:'878787'
+             color:'gray'
          },
          Delete:{
              marginLeft:'auto'

@@ -117,8 +117,8 @@ const CreateView = () => {
             <br/>
             <InputBase onChange={(e)=>handleChange2(e)} placeholder='Author' name='username' className={classes.TextField}/>
             
-            <InputBase onChange={(e)=>handleChange3(e)} placeholder='Category=>Music Sports Tech Politics' name='categories' style={{
-                marginLeft:50
+            <InputBase onChange={(e)=>handleChange3(e)} placeholder='Category=> Movies Music Sports Tech Politics' name='categories' style={{
+                marginLeft:50, color:"gray"
             }} className={classes.TextField}/>
             <TextareaAutosize rowsMin={5} placeholder="Tell your story"
                 onChange={(e) => handleChange1(e)}
