@@ -26,7 +26,7 @@ const Register = () => {
             axios.post("https://blog-application-server.herokuapp.com/register", {name, email, password})
             .then( res => {
                 localStorage.setItem(LS_AUTH_TOKEN, res.data.token);
-                window.location.href = "/login";
+                window.location.href = "/";
             })
         } else {
             alert("invlid input")
