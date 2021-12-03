@@ -115,10 +115,10 @@ const CreateView = () => {
                 <Button onClick={() => savePost()} variant="contained" color="primary">Publish</Button>
             </FormControl>
             <br/>
-            <InputBase onChange={(e)=>handleChange2(e)} placeholder='Author' name='username' className={classes.TextField}/>
+            <InputBase onChange={(e)=>handleChange2(e)} placeholder='Author' name='username' style={{color:"brown"}} className={classes.TextField}/>
             
             <InputBase onChange={(e)=>handleChange3(e)} placeholder='Category=> Movies Music Sports Tech Politics' name='categories' style={{
-                marginLeft:50, color:"gray"
+                marginLeft:50, color:"brown"
             }} className={classes.TextField}/>
             <TextareaAutosize rowsMin={5} placeholder="Tell your story"
                 onChange={(e) => handleChange1(e)}
