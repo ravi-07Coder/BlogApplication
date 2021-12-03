@@ -41,7 +41,7 @@ const Register = () => {
             <input  autoComplete="off" type="text" name="email" value={user.email} placeholder="Your Email" onChange={ handleChange }></input>
             <input autoComplete="off" type="password" name="password" value={user.password} placeholder="Your Password" onChange={ handleChange }></input>
             <input autoComplete="off" type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter Password" onChange={ handleChange }></input>
-            <div   style={{marginRight:185, marginTop:25}} className="button" onClick={register} >Register</div>
+            <div    style={{marginRight:185, marginTop:25}} className="button" onClick={register} >Register</div>
         
             <div style={{marginRight:-95, marginTop:-50}} className="button" onClick={()=> {window.location.href="/login"}}>Login</div>
         </div>

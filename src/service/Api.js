@@ -77,7 +77,7 @@ export const deletePost= async (id) =>{
 
     export const getComments=async(id)=>{
         try{
-               let response=    await axios.get(`${URL}/comments/${id}`)
+               let response= await axios.get(`${URL}/comments/${id}`)
                 return response.data;
             }
         catch(error)
