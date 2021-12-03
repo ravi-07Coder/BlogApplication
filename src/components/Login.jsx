@@ -35,8 +35,8 @@ const Login = () => {
             
      
             <h1 style={{marginTop:100,textDecoration:'underline'}}>Login</h1>
-            <input type="text" name="email" value={user.email} onChange={handleChange} placeholder="Enter your Email"></input>
-            <input type="password" name="password" value={user.password} onChange={handleChange}  placeholder="Enter your Password" ></input>
+            <input autoComplete="off" type="text" name="email" value={user.email} onChange={handleChange} placeholder="Enter your Email"></input>
+            <input autoComplete="off" type="password" name="password" value={user.password} onChange={handleChange}  placeholder="Enter your Password" ></input>
             <div style={{marginTop:25}} className="button" onClick={login}>Login</div>
          
             <div style={{marginTop:15}}className="button" onClick={() => {window.location.href = "/register"}}>Register</div>
