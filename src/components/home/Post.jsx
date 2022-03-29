@@ -58,7 +58,7 @@ const Post = ({post}) => {
             <Typography className={classes.text}> {post.categories}</Typography>
             <Typography className={classes.heading}>{addElipsis(post.title,20)}</Typography>
             <Typography className={classes.text}> Author:{post.username}</Typography>
-            <Typography>{addElipsis(post.description,80)}</Typography>
+            <Typography>{addElipsis(post.description,80)} </Typography>
         </Box>
     )
 }
