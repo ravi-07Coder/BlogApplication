@@ -8,8 +8,7 @@ import { getAllPosts } from '../../service/Api'
 const Posts = () => {
     const [posts,setPosts]=useState([])
     const { search }=useLocation();
-   useEffect(() => {
-       
+   useEffect(() => {       
        const fetchData= async () => {
         let data= await getAllPosts(search); 
         console.log(data)

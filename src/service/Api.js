@@ -39,7 +39,8 @@ export const updatePost=async(id,post)=>{
    }
    catch(error)
    {
-       console.log("error while connecting updatePost",error)
+       console.log
+       ("error while connecting updatePost",error)
    }
 }
 
