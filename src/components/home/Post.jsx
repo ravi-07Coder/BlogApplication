@@ -48,9 +48,7 @@ const useStyles=makeStyles({
 
 const Post = ({post}) => {
     const url=   post.picture  ||  'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80'
-    // const addElipsis=(str,limit)=>{
-    //     // return str.length>limit? str.substring(0,limit)+"...":str;
-    // }
+    
     const classes=useStyles()
     return (
         <Box className={classes.container}>
@@ -58,7 +56,7 @@ const Post = ({post}) => {
             <Typography className={classes.text}> {post.categories}</Typography>
             <Typography className={classes.heading}></Typography>
             <Typography className={classes.text}> Author:{post.username}</Typography>
-            {/* <Typography>{addElipsis(post.description,80)} </Typography> */}
+   
         </Box>
     )
 }
