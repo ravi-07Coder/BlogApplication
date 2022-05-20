@@ -29,7 +29,7 @@ export const getPost = async (id) => {
         let response = await axios.get(`${URL}/post/${id}`);
         return response.data;
     } catch (error) {
-        console.log('Error while calling getPost API ', error);
+        console.log('Error while calling getPost API  error', error);
     }
 }
 
@@ -96,3 +96,4 @@ export const deletePost= async (id) =>{
         }
     }
 
+// 
